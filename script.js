@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-    '/site/imagens/divisoria_2_1920.jpg',
-    '/site/imagens/divisoria_3_1920.jpg',
+    'imagens/divisoria 2.jpg',
+    'imagens/divisoria 3.jpg',
 
        
         // Adicione todos os caminhos das suas imagens
