@@ -328,6 +328,7 @@
     align-items: center; 
     gap: 100px; /* Espaçamento entre os logos */
     padding: 0 20px;
+    
 }
 
 /* Configurações para as imagens individuais */
@@ -337,7 +338,7 @@
     height: auto; /* 👈 ESSENCIAL: Mantém a proporção da imagem ao redimensionar */
 
     /* Controle de Tamanho e Flexibilidade */
-    flex-basis: 150px; /* Define um tamanho base para o logo. Ajuste este valor. */
+    flex-basis: 160px; /* Define um tamanho base para o logo. Ajuste este valor. */
     width: 100%; /* Faz o logo ocupar o espaço definido pelo flex-basis */
     object-fit: contain; /* Garante que o logo não seja cortado */
 }
