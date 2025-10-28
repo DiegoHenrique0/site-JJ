@@ -1,6 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/*variaveis*/
+
+/*cores*/
+:root {
+  --azul: #1f8cff;
+  --fonte: "Oswald", sans-serif;
+
+}
+
+
+
 *{
   margin: 0px;
-  padding: 0px;      
+  padding: 0px; 
+  font-family: var(--fonte);
+  
 }
 
 
@@ -10,7 +26,7 @@
     display: flex; /* Usa flexbox para alinhar itens */
     justify-content: space-between; /* Espaça o logo/brand e os links */
     align-items: center; /* Centraliza verticalmente */
-    background-color: #0a0427cc;
+    background-color: var(--azul);
     color: white;
     padding: 10px 20px;
 }
@@ -183,7 +199,7 @@
     margin-top: 5%;
     margin-bottom: 5%;
     padding-bottom: 3%;
-    background-color: #007cffe0;
+    background-color: var(--azul);
     
 }
 
@@ -308,7 +324,7 @@
 
 .clientes-section {
     /* Fundo Azul */
-    background-color: #3b74e8;
+    background-color: var(--azul);
     padding: 25px 0; 
 }
 
