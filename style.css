@@ -1,12 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+
+
+/*bolinha*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta&family=Poppins&display=swap');
+
 /*variaveis*/
 
 /*cores*/
 :root {
   --azul: #1f8cff;
   --fonte: "Oswald", sans-serif;
+  --fonte_texto: "Poppins", sans-serif;
+  --sombreado_div: 0px 14px 13px #00000087; /*sombreado das divis azul*/
 
 }
 
@@ -200,6 +207,7 @@
     margin-bottom: 5%;
     padding-bottom: 3%;
     background-color: var(--azul);
+    box-shadow: var(--sombreado_div);
     
 }
 
@@ -274,14 +282,20 @@
       padding: 40px 20px;
       max-width: 1200px;
       margin: auto;
+      
+    }
+
+    p{
+font-family: var(--fonte_texto);
     }
 
     .texto {
       flex: 1 1 400px;
       padding: 20px;
-      font-size: 1.3em;
-      line-height: 1.7;
+      font-size: 1.2em;
+      line-height: 1.6;
       text-align: justify;
+
     }
 
     .texto h2 {
@@ -304,6 +318,7 @@
 
     @media (max-width: 768px) {
       .container1 {
+        
         flex-direction: column;
         text-align: center;
       }
@@ -326,6 +341,7 @@
     /* Fundo Azul */
     background-color: var(--azul);
     padding: 25px 0; 
+    box-shadow: var(--sombreado_div);
 }
 
 .section-title {
@@ -376,6 +392,12 @@
 
 
 
+   footer {
+      background: #fafafa;
+      padding: 40px 20px 10px;
+      text-align: left;
+      margin-top: 40px;
+      }
 
 
 
@@ -445,11 +467,6 @@
       margin-top: 20px;
     }
 
-       footer {
-      background: #fafafa;
-      padding: 40px 20px 10px;
-      text-align: left;
-      }
-
+    
 
     
