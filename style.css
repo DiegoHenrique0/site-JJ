@@ -23,7 +23,6 @@
   margin: 0px;
   padding: 0px; 
   font-family: var(--fonte);
-  
 }
 
 
@@ -33,7 +32,11 @@
     display: flex; /* Usa flexbox para alinhar itens */
     justify-content: space-between; /* Espaça o logo/brand e os links */
     align-items: center; /* Centraliza verticalmente */
-    background-color: var(--azul);
+    background-color: rgba(100, 107, 116, 0.20);
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px); 
+
+
     color: white;
     padding: 10px 20px;
 }
@@ -206,12 +209,11 @@
     margin-top: 5%;
     margin-bottom: 5%;
     padding-bottom: 3%;
-    background-color: var(--azul);
-    box-shadow: var(--sombreado_div);
-    
 }
 
 .trabalhamos_titulo{
+  text-transform: uppercase;
+  color: #135ba8;
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 49px;
@@ -228,7 +230,7 @@
 .card {
   background-color: white;
   border-radius: 5%;
-  box-shadow: 9px 9px 13px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 9px 13px rgba(0, 0, 0, 0.95);
   width: 100%;
   max-width: 300px; /* Limita largura em telas maiores */
   padding: 20px;
@@ -421,6 +423,10 @@ font-family: var(--fonte_texto);
     .footer-col h3 {
       font-style: italic;
       margin-bottom: 20px;
+    }
+
+    .footer-col a{
+      text-decoration: none;
     }
 
     .footer-col p {
