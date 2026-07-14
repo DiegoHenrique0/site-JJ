@@ -29,17 +29,25 @@
 
 /*barra de navegação*/
 .navbar {
-    display: flex; /* Usa flexbox para alinhar itens */
-    justify-content: space-between; /* Espaça o logo/brand e os links */
-    align-items: center; /* Centraliza verticalmente */
+
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     background-color: rgba(100, 107, 116, 0.20);
+  
     backdrop-filter: blur(6px); 
     -webkit-backdrop-filter: blur(6px); 
-    position: absolute; /* opcional */
-    width: 100%;
+    
+    /* Box-sizing garante que o padding não aumente o tamanho total da navbar */
+    box-sizing: border-box;
+    width: 100%; 
+    
+    position: absolute; 
+    top: 0;
+    left: 0;
     z-index: 1000;
 
-    color: white;
+    color: white; 
     padding: 10px 20px;
 }
 
@@ -288,6 +296,8 @@
       max-width: 1200px;
       margin: auto;
       
+      
+      
     }
 
     p{
@@ -313,12 +323,14 @@ font-family: var(--fonte_texto);
       flex: 1 1 300px;
       padding: 20px;
       text-align: center;
+      border: 3px groove #000000;
+      border-radius: 15px;
     }
 
     .imagem-responsiva img {
       max-width: 100%;
       height: auto;
-      border-radius: 6%;
+      border-radius: 10px;
     }
 
     @media (max-width: 768px) {
