@@ -35,7 +35,9 @@
     background-color: rgba(100, 107, 116, 0.20);
     backdrop-filter: blur(6px); 
     -webkit-backdrop-filter: blur(6px); 
-
+    position: absolute; /* opcional */
+    width: 100%;
+    z-index: 1000;
 
     color: white;
     padding: 10px 20px;
@@ -50,6 +52,7 @@
     margin: 0;
     padding: 0;
     display: flex; /* Links ficam lado a lado */
+    padding-right: 6%;
 }
 
 .navbar-links li {
@@ -340,14 +343,16 @@ font-family: var(--fonte_texto);
 
 
 .clientes-section {
-    /* Fundo Azul */
-    background-color: var(--azul);
+    /* Fundo*/
+    background-color: rgb(169, 169, 169, 0.60);
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px);  
     padding: 25px 0; 
     box-shadow: var(--sombreado_div);
 }
 
 .section-title {
-    color: white;
+    color: #135ba8;
     font-size: 1.5em;
     /* Mantém o texto alinhado à esquerda como na imagem */
     padding-left: 20px; 
@@ -368,7 +373,7 @@ font-family: var(--fonte_texto);
 /* Configurações para as imagens individuais */
 .logos-container img {
     /* RESPONSIVIDADE PRINCIPAL */
-    max-width: 100%; /* Garante que a imagem nunca estoure o contêiner */
+    max-width: 15%; /* Garante que a imagem nunca estoure o contêiner */
     height: auto; /* 👈 ESSENCIAL: Mantém a proporção da imagem ao redimensionar */
 
     /* Controle de Tamanho e Flexibilidade */
