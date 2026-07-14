@@ -33,7 +33,7 @@
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    background-color: rgba(100, 107, 116, 0.20);
+    background-color: rgba(100, 106, 116, 0.20);
   
     backdrop-filter: blur(6px); 
     -webkit-backdrop-filter: blur(6px); 
@@ -45,7 +45,7 @@
     position: absolute; 
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 9999;
 
     color: white; 
     padding: 10px 20px;
@@ -154,6 +154,10 @@
     }
 }
 
+main{
+  margin: 0px;
+  padding: 0px;
+}
 
 /*carrossel de imagens automaticas*/
 .hero-section {
