@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
@@ -13,15 +12,16 @@
   --azul: #1f8cff;
   --fonte: "Oswald", sans-serif;
   --fonte_texto: "Poppins", sans-serif;
-  --sombreado_div: 0px 14px 13px #00000087; /*sombreado das divis azul*/
+  --sombreado_div: 0px 14px 13px #00000087;
+  /*sombreado das divis azul*/
 
 }
 
 
 
-*{
+* {
   margin: 0px;
-  padding: 0px; 
+  padding: 0px;
   font-family: var(--fonte);
 }
 
@@ -30,208 +30,242 @@
 /*barra de navegação*/
 .navbar {
 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    background-color: rgba(100, 106, 116, 0.20);
-  
-    backdrop-filter: blur(6px); 
-    -webkit-backdrop-filter: blur(6px); 
-    
-    /* Box-sizing garante que o padding não aumente o tamanho total da navbar */
-    box-sizing: border-box;
-    width: 100%; 
-    
-    position: absolute; 
-    top: 0;
-    left: 0;
-    z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(100, 106, 116, 0.20);
 
-    color: white; 
-    padding: 10px 20px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  /* Box-sizing garante que o padding não aumente o tamanho total da navbar */
+  box-sizing: border-box;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  color: white;
+  padding: 10px 20px;
 }
 
 .navbar-brand {
-   width: 150px;
+  width: 150px;
 }
 
 .navbar-links {
-    list-style: none; /* Remove marcadores de lista */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Links ficam lado a lado */
-    padding-right: 6%;
+  list-style: none;
+  /* Remove marcadores de lista */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* Links ficam lado a lado */
+  padding-right: 6%;
 }
 
 .navbar-links li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .navbar-links a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-links a:hover {
-    background-color: #555;
-    border-radius: 4px;
+  background-color: #555;
+  border-radius: 4px;
 }
 
 /* Esconde o botão de hambúrguer por padrão em telas maiores */
 .navbar-toggler {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    width: 30px; /* Largura do botão */
-    height: 25px; /* Altura do botão */
-    position: relative;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  /* Largura do botão */
+  height: 25px;
+  /* Altura do botão */
+  position: relative;
 }
 
 .navbar-toggler .bar {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0; /* Espaçamento entre as barras */
-    transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  /* Espaçamento entre as barras */
+  transition: all 0.3s ease;
 }
 
 /* responsividade */
 
-@media (max-width: 768px) { /* Exemplo: para telas de até 768px de largura */
-    .navbar {
-        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-        justify-content: space-between; /* Mantém brand e toggler separados */
-    }
+@media (max-width: 768px) {
 
-    .navbar-toggler {
-        display: block; /* Mostra o botão de hambúrguer */
-    }
+  /* Exemplo: para telas de até 768px de largura */
+  .navbar {
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between;
+    /* Mantém brand e toggler separados */
+  }
 
-    .navbar-links {
-        width: 100%; /* Links ocupam toda a largura */
-        flex-direction: column; /* Links empilhados verticalmente */
-        display: none; /* Esconde os links por padrão */
-        text-align: center;
-        padding-top: 10px;
-        background-color: #444444; /* Fundo para o menu aberto */
-    }
+  .navbar-toggler {
+    display: block;
+    /* Mostra o botão de hambúrguer */
+  }
 
-    .navbar-links.active { /* Classe que será adicionada pelo JavaScript */
-        display: flex; /* Mostra os links quando a navbar está ativa */
-    }
+  .navbar-links {
+    width: 100%;
+    /* Links ocupam toda a largura */
+    flex-direction: column;
+    /* Links empilhados verticalmente */
+    display: none;
+    /* Esconde os links por padrão */
+    text-align: center;
+    padding-top: 10px;
+    background-color: #444444;
+    /* Fundo para o menu aberto */
+  }
 
-    .navbar-links li {
-        margin: 0; /* Remove margem lateral */
-        width: 100%; /* Cada item de lista ocupa toda a largura */
-        border-bottom: 1px solid #555; /* Linha divisória entre itens */
-    }
+  .navbar-links.active {
+    /* Classe que será adicionada pelo JavaScript */
+    display: flex;
+    /* Mostra os links quando a navbar está ativa */
+  }
 
-    .navbar-links li:last-child {
-        border-bottom: none; /* Remove a linha do último item */
-    }
+  .navbar-links li {
+    margin: 0;
+    /* Remove margem lateral */
+    width: 100%;
+    /* Cada item de lista ocupa toda a largura */
+    border-bottom: 1px solid #555;
+    /* Linha divisória entre itens */
+  }
 
-    .navbar-links a {
-        display: block; /* Ocupa toda a área clicável */
-        padding: 15px 0; /* Aumenta o padding para facilitar o clique */
-    }
+  .navbar-links li:last-child {
+    border-bottom: none;
+    /* Remove a linha do último item */
+  }
 
-    /* Animação do botão hambúrguer ao ser clicado */
-    .navbar-toggler.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
+  .navbar-links a {
+    display: block;
+    /* Ocupa toda a área clicável */
+    padding: 15px 0;
+    /* Aumenta o padding para facilitar o clique */
+  }
 
-    .navbar-toggler.active .bar:nth-child(2) {
-        opacity: 0;
-    }
+  /* Animação do botão hambúrguer ao ser clicado */
+  .navbar-toggler.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-    .navbar-toggler.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
+  .navbar-toggler.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-main{
-  margin: 0px;
-  padding: 0px;
+  .navbar-toggler.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 /*carrossel de imagens automaticas*/
 .hero-section {
-    position: relative; /* Essencial para o posicionamento absoluto do texto */
-    width: 100%; /* Ocupa a largura total */
-    height: 700px; /* Defina uma altura fixa ou ajuste conforme necessário */
-    overflow: hidden; /* Garante que a imagem não vaze */
-    display: flex; /* Para centralizar a imagem dentro do contêiner */
-    justify-content: center;
-    align-items: center;
+  position: rel ative;
+  /* Essencial para o posicionamento absoluto do texto */
+  width: 100%;
+  /* Ocupa a largura total */
+  height: 500px;
+  /* Defina uma altura fixa ou ajuste conforme necessário */
+  overflow: hidden;
+  /* Garante que a imagem não vaze */
+  display: flex;
+  /* Para centralizar a imagem dentro do contêiner */
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-section img {
-    position: absolute; /* Posiciona a imagem absolutamente dentro do .hero-section */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorção */
-    z-index: 1; /* Coloca a imagem por baixo do texto */
-    transition: opacity 1s ease-in-out; /* Adiciona uma transição suave entre as imagens */
+  position: absolute;
+  /* Posiciona a imagem absolutamente dentro do .hero-section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Garante que a imagem cubra todo o espaço sem distorção */
+  z-index: 1;
+  /* Coloca a imagem por baixo do texto */
+  transition: opacity 1s ease-in-out;
+  /* Adiciona uma transição suave entre as imagens */
 }
 
 .overlay-text {
-    position: relative; /* Posicionamento para que o texto fique acima da imagem */
-    z-index: 2; /* Coloca o texto acima da imagem */
-    color: white; /* Cor do texto para contraste */
-    text-align: justify;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.685); /* Fundo semi-transparente para o texto ser legível */
-    border-radius: 25px;
-    max-width: 70%; /* Limita a largura do texto */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    width: 80%;
+    max-width: 900px;
+
+    text-align: center;
+    color: white;
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
 }
-
 .overlay-text p {
-    font-size: 1.2em;
-    line-height: 1.5;
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
 .overlay-text strong {
-    color: blue;
+  color: blue;
 }
 
 /* Opcional: Adicione regras para responsividade se o texto ficar muito grande em telas pequenas */
 @media (max-width: 768px) {
-    .hero-section {
-        height: 300px; /* Ajusta a altura em telas menores */
-    }
+  .hero-section {
+    height: 300px;
+    /* Ajusta a altura em telas menores */
+  }
 
-    .overlay-text h1 {
-        font-size: 2em;
-    }
+  .overlay-text h1 {
+    font-size: 2em;
+  }
 
-    .overlay-text p {
-        font-size: 1em;
-    }
+  .overlay-text p {
+    font-size: 1em;
+  }
 }
 
 
 /*trabalhamos com */
 
 #trabalhamos_com {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    padding-bottom: 3%;
+  margin-top: 1.5%;
+  margin-bottom: 5%;
+  padding-bottom: 3%;
+
 }
 
-.trabalhamos_titulo{
+.trabalhamos_titulo {
   text-transform: uppercase;
+  text-align: center;
   color: #135ba8;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 49px;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  /*padding-left: 17%;*/
 }
 
 .container {
@@ -247,10 +281,12 @@ main{
   border-radius: 5%;
   box-shadow: 9px 9px 13px rgba(0, 0, 0, 0.95);
   width: 100%;
-  max-width: 300px; /* Limita largura em telas maiores */
+  max-width: 300px;
+  /* Limita largura em telas maiores */
   padding: 20px;
   text-align: center;
-  transition: transform 0.2s; /* Efeito de leve elevação no hover */
+  transition: transform 0.2s;
+  /* Efeito de leve elevação no hover */
 }
 
 /* Efeito hover: sobe o card levemente */
@@ -263,7 +299,8 @@ main{
   width: 100%;
   height: auto;
   max-height: 200px;
-  object-fit: cover; /* Garante que a imagem preencha bem o espaço */
+  object-fit: cover;
+  /* Garante que a imagem preencha bem o espaço */
   border-radius: 10px;
 }
 
@@ -286,128 +323,143 @@ main{
   font-size: 16px;
 }
 
-
-
-
 /*quem somos*/
- .container1 {
-      display: flex;
-      flex-wrap: wrap;
-      /*flex-direction: row-reverse; /* Imagem à direita */
-      /*align-items: center;*/
-      justify-content: center;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-      
-      
-      
-    }
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Imagem à direita */
+  /*align-items: center;*/
+  justify-content: center;
+  align-items: flex-start;  
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: -5%;
+  margin-bottom: 3%;
+}
 
-    p{
-font-family: var(--fonte_texto);
-    }
+p {
+  font-family: var(--fonte_texto);
+}
 
-    .texto {
-      flex: 1 1 400px;
-      padding: 20px;
-      font-size: 1.2em;
-      line-height: 1.6;
-      text-align: justify;
+.texto {
+  flex: 1 1 400px;
+  padding: 20px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
 
-    }
+}
 
-    .texto h2 {
-        text-align: center;
-      font-size: 1.5em;
-      margin-bottom: 5%;
-    }
+.texto h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 5%;
+}
 
-    .imagem-responsiva {
-      flex: 1 1 300px;
-      padding: 20px;
-      text-align: center;
-      border: 3px groove #000000;
-      border-radius: 15px;
-    }
+.imagem-responsiva {
+  flex: 1 1 300px;
+  padding: 20px;
+  text-align: center;
+  border: 3px groove #000000;
+  border-radius: 15px;
+  height: auto;
+  
+}
 
-    .imagem-responsiva img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+.imagem-responsiva img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-    @media (max-width: 768px) {
-      .container1 {
-        
-        flex-direction: column;
-        text-align: center;
-      }
+@media (max-width: 768px) {
+  .container1 {
 
-      .texto, .imagem {
-        padding: 10px;
-      }
+    flex-direction: column;
+    text-align: center;
+  }
 
-    }
+  .texto,
+  .imagem {
+    padding: 10px;
+  }
 
-     @media (max-width: 819px) {
-      .imagem-responsiva {
-        display: none;
-      }
+}
 
-     }
+@media (max-width: 822px) {
+  .imagem-responsiva {
+    display: none;
+  }
+
+}
 
 
 .clientes-section {
-    /* Fundo*/
-    background-color: rgb(169, 169, 169, 0.60);
-    backdrop-filter: blur(6px); 
-    -webkit-backdrop-filter: blur(6px);  
-    padding: 25px 0; 
-    box-shadow: var(--sombreado_div);
+  /* Fundo*/
+  background-color: rgb(169, 169, 169, 0.60);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 25px 0;
+  box-shadow: var(--sombreado_div);
 }
 
 .section-title {
-    color: #135ba8;
-    font-size: 1.5em;
-    /* Mantém o texto alinhado à esquerda como na imagem */
-    padding-left: 20px; 
-    margin-bottom: 20px;
+  color: #135ba8;
+  font-size: 2.3em;
+  /* Mantém o texto alinhado à esquerda como na imagem */
+  padding-left: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Contêiner que controla o layout dos logos */
 .logos-container {
-    display: flex; 
-    flex-wrap: wrap; /* 👈 ESSENCIAL: Permite que os logos quebrem em telas pequenas */
-    justify-content: center; /* 👈 Centraliza os logos horizontalmente */
-    align-items: center; 
-    gap: 100px; /* Espaçamento entre os logos */
-    padding: 0 20px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  /* 👈 ESSENCIAL: Permite que os logos quebrem em telas pequenas */
+  justify-content: center;
+  /* 👈 Centraliza os logos horizontalmente */
+  align-items: center;
+  gap: 100px;
+  /* Espaçamento entre os logos */
+  padding: 0 20px;
+
 }
 
 /* Configurações para as imagens individuais */
 .logos-container img {
-    /* RESPONSIVIDADE PRINCIPAL */
-    max-width: 15%; /* Garante que a imagem nunca estoure o contêiner */
-    height: auto; /* 👈 ESSENCIAL: Mantém a proporção da imagem ao redimensionar */
+  /* RESPONSIVIDADE PRINCIPAL */
+  max-width: 15%;
+  /* Garante que a imagem nunca estoure o contêiner */
+  height: auto;
+  /* 👈 ESSENCIAL: Mantém a proporção da imagem ao redimensionar */
 
-    /* Controle de Tamanho e Flexibilidade */
-    flex-basis: 160px; /* Define um tamanho base para o logo. Ajuste este valor. */
-    width: 100%; /* Faz o logo ocupar o espaço definido pelo flex-basis */
-    object-fit: contain; /* Garante que o logo não seja cortado */
+  /* Controle de Tamanho e Flexibilidade */
+  flex-basis: 160px;
+  /* Define um tamanho base para o logo. Ajuste este valor. */
+  width: 100%;
+  /* Faz o logo ocupar o espaço definido pelo flex-basis */
+  object-fit: contain;
+  /* Garante que o logo não seja cortado */
 }
 
 /* * Media Query para ajustar o tamanho dos logos em dispositivos muito pequenos (Ex: Celulares)
  */
 @media (max-width: 600px) {
-    .logos-container {
-        gap: 55px; /* Reduz um pouco o espaçamento */
-    }
-    
-    .logos-container img {
-        flex-basis: 110px; /* Reduz o tamanho base para que mais caibam na tela */
-    }
+  .logos-container {
+    gap: 55px;
+    /* Reduz um pouco o espaçamento */
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .logos-container img {
+    flex-basis: 110px;
+    /* Reduz o tamanho base para que mais caibam na tela */
+  }
 }
 
 
@@ -415,85 +467,92 @@ font-family: var(--fonte_texto);
 
 
 
-   footer {
-      background: #fafafa;
-      padding: 40px 20px 10px;
-      text-align: left;
-      margin-top: 40px;
-      }
+footer {
+  background: #fafafa;
+  padding: 40px 20px 10px;
+  text-align: left;
+  margin-top: 40px;
+}
 
 
 
 
 
-        .footer-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .footer-col {
-      flex: 1;
-      min-width: 250px;
-    }
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
 
-    .footer-col h3 {
-      font-style: italic;
-      margin-bottom: 20px;
-    }
+.footer-col h3 {
+  font-style: italic;
+  margin-bottom: 20px;
+}
 
-    .footer-col a{
-      text-decoration: none;
-    }
+.footer-col a {
+  text-decoration: none;
+}
 
-    .footer-col p {
-      margin: 10px 0;
-      font-size: 16px;
-    }
+.footer-col p {
+  margin: 10px 0;
+  font-size: 16px;
+}
 
-    .footer-col img.icon {
-      width: 30px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
+.footer-col img.icon {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
 
-    .social-icons img {
-      width: 40px;
-      margin: 0 8px;
-      transition: transform 0.3s;
-    }
+.social-icons img {
+  width: 40px;
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
 
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
+.social-icons img:hover {
+  transform: scale(1.2);
+}
 
-    .mapa {
-      border-radius: 20px;
-      overflow: hidden;
-      max-width: 100%;
-    }
+.mapa {
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 100%;
+}
 
-    .mapa iframe {
-      width: 100%;
-      height: 200px;
-      border: none;
-    }
+.mapa iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+}
 
-    .footer-bottom {
-      margin-top: 20px;
-      border-top: 3px solid #999;
-      padding-top: 10px;
-      font-size: 14px;
-    }
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 3px solid #999;
+  padding-top: 10px;
+  font-size: 14px;
+}
 
-    .footer-logo {
-      margin-top: 20px;
-    }
+.footer-logo {
+  margin-top: 20px;
+}
 
-    
-
-    
+#carouselExampleIndicators {
+    width: 100%;
+    margin: 0 auto;
+}
+.carousel-item img {
+    width: 100%;
+    height: 870px;
+    object-fit: cover;
+    border-radius: 15px;
+}
