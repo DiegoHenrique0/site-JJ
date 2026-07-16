@@ -7,13 +7,12 @@
     <link rel="icon" type="image/png" href="icones/faviconjj.png">
     <title>JJ Divisórias</title>
 
-    <!--coneção com o bootstrap-->
+    <!--Coneção com o bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"crossorigin="anonymous"></script>
 
+    <!-- conexão com CSS -->
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +24,8 @@
 
 <body>
     <header>
+        
+        <!-- Navbar Logo -->
         <nav class="navbar">
             <img class="navbar-brand" src="imagens/logoPequena.webp" alt="Logo JJ" srcset=""> <!-- logo JJ-->
             <button class="navbar-toggler" aria-label="Abrir menu" aria-expanded="false">
@@ -33,15 +34,16 @@
                 <span class="bar"></span>
             </button>
 
+            <!-- Navbar Links/Hambúguer -->
             <ul class="navbar-links">
                 <li>
                     <a href="#home">Home</a>
                 </li>
                 <li>
-                    <a href="#quem_somos">Sobre</a>
+                    <a href="#trabalhamos_com">Serviços</a>
                 </li>
                 <li>
-                    <a href="#trabalhamos_com">Serviços</a>
+                    <a href="#quem_somos">Sobre</a>
                 </li>
                 <li>
                     <a href="#contato">Contato</a>
@@ -51,8 +53,9 @@
     </header>
 
     <main>
+        <!-- Carrossel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-
+            <!-- Indicadores (barras de navegação) -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -71,9 +74,10 @@
                     garantindo a satisfação de nossos clientes e a entrega de projetos impecáveis.</p>
             </div>
 
+            <!-- Carrossel de imagens -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="imagens/redimensao1.jpg" class="d-block w-100" alt="Instalação de Divisórias">
+                    <img src="imagens/redimensao1.jpg" class="d-block w-100" alt="Nossos Serviços">
                 </div>
                 <div class="carousel-item">
                     <img src="imagens/divisoria 2.jpg" class="d-block w-100" alt="Nossos Serviços">
@@ -82,11 +86,13 @@
                     <img src="imagens/divisoria 3.jpg" class="d-block w-100" alt="Nossos Serviços">
                 </div>
             </div>
+            <!-- Botão para imagem anterior -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
+            <!-- Botão para proxima imagem  -->
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -108,10 +114,10 @@
 
                 <h3>Drywall</h3>
                 <ul>
-                    <li>🦾​ Resistência e Durabilidade</li>
+                    <li>💪​ Resistência e Durabilidade</li>
                     <li>🎧 Conforto Acústico e Térmico</li>
                     <li>⏱️ Rapidez na Instalação</li>
-                    <li> $ Custo-Benefício</li>
+                    <li>💲 Custo-Benefício</li>
                 </ul>
             </div>
 
@@ -120,7 +126,7 @@
                 <img src="imagens/tapumes 249.jpg" alt="Tapumes">
                 <h3>Tapumes</h3>
                 <ul>
-                    <li>🦾​ Resistência e Durabilidade</li>
+                    <li>💪​ Resistência e Durabilidade</li>
                     <li>🎧 Conforto Acústico e Térmico</li>
                     <li>⏱️ Rapidez na Instalação</li>
                     <li>💲 Custo-Benefício</li>
@@ -132,7 +138,7 @@
                 <img src="imagens/divisoria 249.jpg" alt="Divisórias">
                 <h3>Divisórias</h3>
                 <ul>
-                    <li>🦾​ Resistência e Durabilidade</li>
+                    <li>💪​ Resistência e Durabilidade</li>
                     <li>🎧 Conforto Acústico e Térmico</li>
                     <li>🔐 Organização e Privacidade</li>
                     <li>💲 Custo-Benefício</li>
@@ -152,11 +158,12 @@
             </div>
         </div>
     </div>
-
+    <!-- Seção quem somos -->
     <div id="quem_somos" class="container1">
         <div class="imagem-responsiva">
             <img src="imagens/homem quem somos 703.jpg" alt="Trabalhador com capacete">
         </div>
+        <!-- Texto quem somos -->
         <div class="texto">
             <h2>Quem Somos</h2>
             <p>Fundada em 2010 com o objetivo de suprir a demanda por soluções rápidas e eficientes em divisórias e
@@ -173,8 +180,10 @@
         </div>
     </div>
 
+    <!-- Seção de clientes atendidos -->
     <div class="clientes-section">
         <h2 class="section-title">JÁ PRESTAMOS SERVIÇOS PARA </h2>
+        <!-- Contêiner com os logos dos clientes -->
         <div class="logos-container">
             <img src="imagens/serviços/valor160.png" alt="valor ambiental">
             <img src="imagens/serviços/pecista160.png" alt="pecista">
@@ -187,31 +196,47 @@
     </div>
 
     <footer>
+        <!-- Rodapé / Contato -->
         <div id="contato" class="footer-container">
 
             <!-- Coluna contato -->
             <div class="footer-col">
                 <h3>Entre em contato</h3>
-                <a target="_blank" href="tel:+5561982090249">
-                    <img src="icones/telefonePreto.png" class="icon" alt="telefone"> (61) 9
-                    8499-1705</a>
+                <!-- telefones -->
+                <a target="_blank" href="tel:+5561984991705">
+                    <img src="icones/telefonePreto.png" class="icon" alt="telefone"> (61) 98499-1705
+                </a>
+
+                <div class="numeros">
+                    <a target="_blank" href="tel:+5561982090249">
+                        <img src="icones/telefonePreto.png" class="icon" alt="telefone"> (61) 98209-0249
+                    </a>
+                </div>
+                <!-- email -->
                 <p>
                     <a target="_blank" href="mailto:jj.divisorias.jj@gmail.com?subject=Solicitação%20de%20Orçamento">
-                    <img src="icones/emailPreto.png" class="icon" alt="email"> jj.divisorias.jj@gmail.com</a></p>
+                        <img src="icones/emailPreto.png" class="icon" alt="email"> jj.divisorias.jj@gmail.com
+                    </a>
+                </p>
             </div>
 
             <!-- Coluna redes sociais -->
             <div class="footer-col">
                 <h3>Redes Sociais</h3>
                 <div class="social-icons">
+                    <!-- whatsapp -->
                     <a target="_blank" href="https://wa.me//556184991705/?text=Quero%20fazer%20um%20orçamento!">
                         <img src="icones/whatsappPreto.png" alt="WhatsApp">
                     </a>
-                    <a href="https://www.instagram.com/divisoriasjj/?utm_source=qr&igsh=czJvOG84eWswbjR5" target="_blank" >
-                        <img src="icones/instagramPetro.png" alt="Instagram"></a>
-                    <a target="_blank"
-                        href="https://www.facebook.com/people/JJ-Divis%C3%B3rias/pfbid084KKRJHwzYALjitAkgs7Fwq2wCkBUWsuyRRqfUyBBt7KsE2GezBSGLpaVWuntNfZl/?rdid=9CaYOPzKP1rlkB44&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ZricdekRu%2F"><img
-                            src="imagens/facebook.svg" alt="Facebook"></a>
+                    <!-- instagram -->
+                    <a href="https://www.instagram.com/divisoriasjj/?utm_source=qr&igsh=czJvOG84eWswbjR5"
+                        target="_blank">
+                        <img src="icones/instagramPetro.png" alt="Instagram">
+                    </a>
+                    <!-- facebook -->
+                    <a target="_blank" href="https://www.facebook.com/people/JJ-Divis%C3%B3rias/pfbid084KKRJHwzYALjitAkgs7Fwq2wCkBUWsuyRRqfUyBBt7KsE2GezBSGLpaVWuntNfZl/?rdid=9CaYOPzKP1rlkB44&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1ZricdekRu%2F">
+                        <img src="imagens/facebook.svg" alt="Facebook">
+                    </a>
                 </div>
             </div>
 
@@ -219,8 +244,7 @@
             <div class="footer-col">
                 <h3>Localização</h3>
                 <div class="mapa">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d295.86584420459735!2d-48.15947236087028!3d-15.800251246787175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1760891049422!5m2!1spt-BR!2sbr"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d295.86584420459735!2d-48.15947236087028!3d-15.800251246787175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1760891049422!5m2!1spt-BR!2sbr"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -230,9 +254,9 @@
         <!-- Rodapé inferior -->
         <div class="footer-bottom">
             <p>© 2025 JJ divisórias. Todos os direitos reservados.</p>
-        </div>
 
-        <div class="imag-rodape"></div>
+            <img src="imagens/logo pequena].png" class="imag-rodape" alt="Logo JJ Divisórias">
+        </div>
     </footer>
 </body>
 

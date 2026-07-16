@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-
-
-/*bolinha*/
 @import url('https://fonts.googleapis.com/css2?family=Mukta&family=Poppins&display=swap');
 
 /*variaveis*/
-
-/*cores*/
 :root {
   --azul: #1f8cff;
   --fonte: "Oswald", sans-serif;
@@ -18,35 +12,27 @@
 }
 
 
-
+/* configurações gerais da página */
 * {
   margin: 0px;
   padding: 0px;
   font-family: var(--fonte);
 }
 
-
-
 /*barra de navegação*/
 .navbar {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(100, 106, 116, 0.20);
-
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  /* Box-sizing garante que o padding não aumente o tamanho total da navbar */
+  -webkit-backdrop-filter: blur(6px); /* Box-sizing garante que o padding não aumente o tamanho total da navbar */
   box-sizing: border-box;
   width: 100%;
-
   position: absolute;
   top: 0;
   left: 0;
   z-index: 9999;
-
   color: white;
   padding: 10px 20px;
 }
@@ -56,12 +42,10 @@
 }
 
 .navbar-links {
-  list-style: none;
-  /* Remove marcadores de lista */
+  list-style: none; /* Remove marcadores de lista */
   margin: 0;
   padding: 0;
-  display: flex;
-  /* Links ficam lado a lado */
+  display: flex; /* Links ficam lado a lado */
   padding-right: 6%;
 }
 
@@ -88,10 +72,8 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  width: 30px;
-  /* Largura do botão */
-  height: 25px;
-  /* Altura do botão */
+  width: 30px;  /* Largura do botão */
+  height: 25px; /* Altura do botão */
   position: relative;
 }
 
@@ -106,29 +88,21 @@
 }
 
 /* responsividade */
+@media (max-width: 768px) { /*telas de até 768px de largura */
 
-@media (max-width: 768px) {
-
-  /* Exemplo: para telas de até 768px de largura */
   .navbar {
-    flex-wrap: wrap;
-    /* Permite que os itens quebrem para a próxima linha */
-    justify-content: space-between;
-    /* Mantém brand e toggler separados */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between; /* Mantém brand e toggler separados */
   }
 
   .navbar-toggler {
-    display: block;
-    /* Mostra o botão de hambúrguer */
+    display: block;/* Mostra o botão de hambúrguer */
   }
 
   .navbar-links {
-    width: 100%;
-    /* Links ocupam toda a largura */
-    flex-direction: column;
-    /* Links empilhados verticalmente */
-    display: none;
-    /* Esconde os links por padrão */
+    width: 100%; /* Links ocupam toda a largura */
+    flex-direction: column; /* Links empilhados verticalmente */
+    display: none; /* Esconde os links por padrão */
     text-align: center;
     padding-top: 15px;
     background-color: #00000080;
@@ -136,30 +110,21 @@
   }
 
   .navbar-links.active {
-    /* Classe que será adicionada pelo JavaScript */
-    display: flex;
-    /* Mostra os links quando a navbar está ativa */
+    display: flex; /* Mostra os links quando a navbar está ativa */
   }
 
   .navbar-links li {
-    
-    /* Remove margem lateral */
-    width: 100%;
-    /* Cada item de lista ocupa toda a largura */
-    border-bottom: 2px solid #555555fb;
-    /* Linha divisória entre itens */
+    width: 100%; /* Cada item de lista ocupa toda a largura */
+    border-bottom: 2px solid #555555fb; /* Linha divisória entre itens */
   }
 
   .navbar-links li:last-child {
-    border-bottom: none;
-    /* Remove a linha do último item */
+    border-bottom: none; /* Remove a linha do último item */
   }
 
   .navbar-links a {
-    display: block;
-    /* Ocupa toda a área clicável */
-    padding: 15px 0;
-    /* Aumenta o padding para facilitar o clique */
+    display: block;  /* Ocupa toda a área clicável */
+    padding: 15px 0; /* Aumenta o padding para facilitar o clique */
   }
 
   /* Animação do botão hambúrguer ao ser clicado */
@@ -176,46 +141,52 @@
   }
 }
 
-/*Aqui altera as imagens do carrosel*/
-
+/* altera as propriedades das imagens do carrosel*/
 .carousel-item img {
-    width: 100%;
-    height: 100vh;
-    min-height: 400px;
-    max-height: 870px;
-    object-fit: cover;
-    border-radius: 15px;
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  max-height: 870px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#carouselExampleIndicators {
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* texto inicil que aparece junto como carrosel de imagesn */
 .overlay-text {
-    position: absolute;
-    top: 50%;  
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    width: 80%;
-    max-width: 900px;
+  width: 80%;
+  max-width: 900px;
 
-    text-align: center;
-    color: white;
-    z-index: 1000;
+  text-align: center;
+  color: white;
+  z-index: 1000;
 
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    border-radius: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
 }
+
 .overlay-text p {
+  text-align: justify;
+  padding: 8px 25px;
   font-size: 1.2em;
   line-height: 1.5;
 }
 
 .overlay-text strong {
-  color:#2053dff8
+  color: #3869f1f8
 }
 
 /*trabalhamos com */
-
 #trabalhamos_com {
   margin-top: 1.5%;
   margin-bottom: 5%;
@@ -243,7 +214,7 @@
 .card {
   background-color: white;
   border-radius: 5%;
-  box-shadow: 9px 9px 13px rgba(0, 0, 0, 0.95);
+  box-shadow: 9px 9px 13px rgba(0, 0, 0, 0.75);
   width: 100%;
   max-width: 300px;
   /* Limita largura em telas maiores */
@@ -255,7 +226,7 @@
 
 /* Efeito hover: sobe o card levemente */
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 /* Imagem responsiva e com bordas arredondadas */
@@ -263,8 +234,7 @@
   width: 100%;
   height: 275px;
   max-height: 200px;
-  object-fit: cover;
-  /* Garante que a imagem preencha bem o espaço */
+  object-fit: cover; /* Garante que a imagem preencha bem o espaço */
   border-radius: 10px;
 }
 
@@ -292,10 +262,9 @@
 .container1 {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse; /* Imagem à direita */
-  /*align-items: center;*/
-  justify-content: center;
-  align-items: flex-start;  
+  flex-direction: row-reverse; /* Imagem à direita */ 
+  justify-content: center; /*align-items: center;*/
+  align-items: flex-start;
   padding: 40px 20px;
   max-width: 1200px;
   margin: auto;
@@ -322,6 +291,7 @@ p {
   margin-bottom: 5%;
 }
 
+/* Imagem da seção "Quem Somos" */
 .imagem-responsiva {
   flex: 1 1 300px;
   padding: 20px;
@@ -329,7 +299,7 @@ p {
   border: 3px groove #000000;
   border-radius: 15px;
   height: auto;
-  
+
 }
 
 .imagem-responsiva img {
@@ -338,6 +308,7 @@ p {
   border-radius: 10px;
 }
 
+/* responsividade */
 @media (max-width: 768px) {
   .container1 {
 
@@ -352,6 +323,7 @@ p {
 
 }
 
+/* faz com que a imagem do homem suma quando chegue nesse tamanho de tala */
 @media (max-width: 822px) {
   .imagem-responsiva {
     display: none;
@@ -359,7 +331,7 @@ p {
 
 }
 
-
+/* Seção de clientes */
 .clientes-section {
   /* Fundo*/
   background-color: rgb(169, 169, 169, 0.60);
@@ -369,6 +341,7 @@ p {
   box-shadow: var(--sombreado_div);
 }
 
+/* Título da seção */
 .section-title {
   color: #135ba8;
   font-size: 2.3em;
@@ -412,22 +385,24 @@ p {
 /* * Media Query para ajustar o tamanho dos logos em dispositivos muito pequenos (Ex: Celulares)
  */
 @media (max-width: 600px) {
+  
+  /* Diminui o espaçamento entre as logos */
   .logos-container {
     gap: 55px;
-    /* Reduz um pouco o espaçamento */
   }
 
+   /* Reduz o tamanho do título da seção */
   .section-title {
     font-size: 1.5em;
   }
 
+  /* Reduz o tamanho das logos para melhor adaptação */
   .logos-container img {
     flex-basis: 110px;
-    /* Reduz o tamanho base para que mais caibam na tela */
   }
 }
 
-
+/* Rodapé */
 footer {
   background: #fafafa;
   padding: 40px 20px 10px;
@@ -435,6 +410,7 @@ footer {
   margin-top: 40px;
 }
 
+/* Contêiner principal do rodapé */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -445,11 +421,13 @@ footer {
   margin: auto;
 }
 
+/* Colunas do rodapé */
 .footer-col {
   flex: 1;
   min-width: 250px;
 }
 
+/* Títulos das colunas */
 .footer-col h3 {
   font-style: italic;
   margin-bottom: 20px;
@@ -457,56 +435,102 @@ footer {
   text-transform: uppercase;
 }
 
+/* Links do rodapé */
 .footer-col a {
   text-decoration: none;
   color: rgba(10, 10, 10, 0.815);
 }
 
+/* Parágrafos do rodapé */
 .footer-col p {
   margin: 10px 0;
   font-size: 16px;
 }
 
+/* Ícones das informações de contato */
 .footer-col img.icon {
   width: 30px;
   vertical-align: middle;
   margin-right: 10px;
 }
 
+/* Ícones das redes sociais */
 .social-icons img {
   width: 40px;
   margin: 0 8px;
   transition: transform 0.3s;
 }
 
+/* Efeito ao passar o mouse sobre os ícones */
 .social-icons img:hover {
   transform: scale(1.2);
 }
 
+/* Contêiner do mapa */
 .mapa {
-  border-radius: 20px;
   overflow: hidden;
-  max-width: 100%;
+  width: 350px;
+  height: 200px;
+  border-radius: 25px;
+  margin: auto;
 }
 
+/* Configuração do Google Maps */
 .mapa iframe {
   width: 100%;
   height: 200px;
-  border: none;
+  border: none
 }
 
+/* Ajustes para telas muito pequenas */
+@media (max-width: 344px) {
+  .mapa {
+    width: 250px;
+    height: 200px;
+
+  }
+
+}
+
+ /* Números de telefone */
+.numeros {
+  margin-top: 10px;
+}
+
+/* Direitos do site */
+.footer-bottom p {
+  margin-top: 1.5% 
+}
+/* Rodapé inferior */
 .footer-bottom {
-  margin-top: 20px;
-  border-top: 3px solid #999;
-  padding-top: 10px;
-  font-size: 14px;
+  border-top: 2px solid #999;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  margin-top: 25px;
 }
 
-.footer-logo {
-  margin-top: 20px;
+/* Imagem do rodapé */
+.imag-rodape {
+  width: 150px;
+  height: auto;
 }
 
-#carouselExampleIndicators {
-    width: 100%;
-    margin: 0 auto;
+/* Ajustes para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+  
+  /* Organiza os elementos do rodapé em coluna */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* Oculta a logo no rodapé em telas pequenas */
+  .imag-rodape {
+    /* width: 130px; */
+    display: none;
+  }
 }
