@@ -77,7 +77,7 @@
 }
 
 .navbar-links a:hover {
-  background-color: #555;
+  background-color: #555555;
   border-radius: 4px;
 }
 
@@ -130,9 +130,9 @@
     display: none;
     /* Esconde os links por padrão */
     text-align: center;
-    padding-top: 10px;
-    background-color: #444444;
-    /* Fundo para o menu aberto */
+    padding-top: 15px;
+    background-color: #00000080;
+    border-radius: 20px;
   }
 
   .navbar-links.active {
@@ -142,11 +142,11 @@
   }
 
   .navbar-links li {
-    margin: 0;
+    
     /* Remove margem lateral */
     width: 100%;
     /* Cada item de lista ocupa toda a largura */
-    border-bottom: 1px solid #555;
+    border-bottom: 2px solid #555555fb;
     /* Linha divisória entre itens */
   }
 
@@ -176,40 +176,14 @@
   }
 }
 
-/*carrossel de imagens automaticas*/
-.hero-section {
-  position: rel ative;
-  /* Essencial para o posicionamento absoluto do texto */
-  width: 100%;
-  /* Ocupa a largura total */
-  height: 500px;
-  /* Defina uma altura fixa ou ajuste conforme necessário */
-  overflow: hidden;
-  /* Garante que a imagem não vaze */
-  display: flex;
-  /* Para centralizar a imagem dentro do contêiner */
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-section img {
-  position: absolute;
-  /* Posiciona a imagem absolutamente dentro do .hero-section */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Garante que a imagem cubra todo o espaço sem distorção */
-  z-index: 1;
-  /* Coloca a imagem por baixo do texto */
-  transition: opacity 1s ease-in-out;
-  /* Adiciona uma transição suave entre as imagens */
-}
-
+/* texto inicil que aparece junto como carrosel de imagesn */
 .overlay-text {
     position: absolute;
+<<<<<<< HEAD
     top: 70%;
+=======
+    top: 50%;
+>>>>>>> 730ba9c0943dc4d84b8a04121216cdc9369c8a4d
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -232,23 +206,6 @@
 .overlay-text strong {
   color: blue;
 }
-
-/* Opcional: Adicione regras para responsividade se o texto ficar muito grande em telas pequenas */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 300px;
-    /* Ajusta a altura em telas menores */
-  }
-
-  .overlay-text h1 {
-    font-size: 2em;
-  }
-
-  .overlay-text p {
-    font-size: 1em;
-  }
-}
-
 
 /*trabalhamos com */
 
@@ -322,6 +279,7 @@
   margin: 10px 0;
   font-size: 16px;
 }
+
 
 /*quem somos*/
 .container1 {
@@ -550,9 +508,12 @@ footer {
     width: 100%;
     margin: 0 auto;
 }
+/*Aqui altera as imagens do carrosel*/
 .carousel-item img {
     width: 100%;
-    height: 870px;
+    height: 100vh;
+    min-height: 400px;
+    max-height: 870px;
     object-fit: cover;
     border-radius: 15px;
 }
