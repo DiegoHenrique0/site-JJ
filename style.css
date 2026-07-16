@@ -16,7 +16,13 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: var(--fonte);
+  /*  */
+  font-family: 'Poppins', sans-serif; font-weight: 400;
+
+}
+
+h1 {
+  font-family: 'Syne', sans-serif; font-weight: 700;
 }
 
 /*barra de navegação*/
