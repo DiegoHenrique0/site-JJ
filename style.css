@@ -179,11 +179,7 @@
 /* texto inicil que aparece junto como carrosel de imagesn */
 .overlay-text {
     position: absolute;
-<<<<<<< HEAD
-    top: 70%;
-=======
-    top: 50%;
->>>>>>> 730ba9c0943dc4d84b8a04121216cdc9369c8a4d
+    top: 70%;  
     left: 50%;
     transform: translate(-50%, -50%);
 
